@@ -225,14 +225,28 @@ main p {
   text-align: center;
 }
 
+.dftf img {
+  width: min(600px, 100%);
+  height: auto;
+  margin-top: 32px;
+}
+
 @media (min-width: 1440px) {
-  .dftf,
-  .fos {
-    margin: 80px auto 0 auto;
+  .dftf_bg {
+    display: none;
+  }
+
+  .dftf {
+    margin: 120px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 0 0 300px 0;
+
+    background-image: url("images/illustration-editor-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 right -250px;
+    background-size: 885px 882px;
   }
 
   .dftf h2,
@@ -252,7 +266,7 @@ main p {
     line-height: 1.2;
     font-weight: var(--fw-semi-bold);
     font-family: var(--ff-primary-100);
-    text-align: center;
+    text-align: left;
     margin-top: 48px;
   }
 
@@ -260,18 +274,22 @@ main p {
   .fos p {
     font-size: var(--fs-500);
     color: var(--clr-neutral-400);
-    margin-top: 8px;
+    margin-top: 24px;
     font-weight: var(--fw-light);
     font-family: var(--ff-primary-100);
-    text-align: center;
+    text-align: left;
+  }
+
+  .dftf_content-2ndheading {
+    margin-top: 100px;
   }
 
   .dftf_grid {
     margin: 80px auto 0 auto;
     max-width: 1110px;
     display: grid;
-    grid-template-columns: 555px 555px;
-    padding: 0 16px 0 16px;
+    grid-template-columns: 655px 455px;
+    padding: 0;
   }
 
   .dftf_col-1 {

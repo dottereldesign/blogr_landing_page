@@ -179,9 +179,19 @@ main p {
   margin-right: 8px;
 }
 
+.hero_link-1:hover {
+  background-color: hsla(0, 0%, 100%, 0.25);
+  color: var(--clr-neutral-100);
+}
+
 .hero_link-2 {
   color: var(--clr-neutral-100);
   margin-left: 8px;
+}
+
+.hero_link-2:hover {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-100);
 }
 
 /* Design for the Future */
@@ -225,9 +235,14 @@ main p {
   text-align: center;
 }
 
-.dftf img,
-.fos img {
+.dftf img {
   width: min(600px, 100%);
+  height: auto;
+  margin-top: 32px;
+}
+
+.fos img {
+  width: min(800px, 100%);
   height: auto;
   margin-top: 32px;
 }
@@ -243,8 +258,7 @@ main p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 220px 0;
-
+    padding: 0 0 230px 0;
     background-image: url("images/illustration-editor-desktop.svg");
     background-repeat: no-repeat;
     background-position: top 0 right -250px;
@@ -282,7 +296,8 @@ main p {
     text-align: left;
   }
 
-  .dftf h3 {
+  .dftf .dftf_content-2ndheading,
+  .fos .fos_content-2ndheading {
     margin-top: 80px;
   }
 
@@ -298,6 +313,36 @@ main p {
     grid-column-start: 1;
     grid-column-end: 2;
   }
+}
+
+/* softi */
+.softi_content {
+  background-color: var(--clr-primary-300);
+  padding-top: 320px;
+  border-radius: 0 100px 0 100px;
+}
+
+.softi img {
+  margin-bottom: -320px;
+}
+
+.softi h3 {
+  font-size: var(--fs-800);
+  color: var(--clr-neutral-100);
+  line-height: 1.2;
+  font-weight: var(--fw-semi-bold);
+  font-family: var(--ff-primary-100);
+  text-align: center;
+}
+
+.softi p {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-100);
+  margin-top: 24px;
+  font-weight: var(--fw-light);
+  font-family: var(--ff-primary-100);
+  text-align: left;
+  padding: 0 16px 72px 16px;
 }
 
 /* fos */

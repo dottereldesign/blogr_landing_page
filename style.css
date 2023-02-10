@@ -315,15 +315,30 @@ main p {
   }
 }
 
+.dftf {
+  margin-bottom: 60px;
+}
+
 /* softi */
+.softi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .softi_content {
   background-color: var(--clr-primary-300);
   padding-top: 320px;
   border-radius: 0 100px 0 100px;
 }
 
+.softi_img-wrapper {
+  z-index: 100;
+}
+
 .softi img {
   margin-bottom: -320px;
+  z-index: 100;
 }
 
 .softi h3 {
@@ -333,6 +348,7 @@ main p {
   font-weight: var(--fw-semi-bold);
   font-family: var(--ff-primary-100);
   text-align: center;
+  padding: 0 16px 0 16px;
 }
 
 .softi p {
@@ -342,7 +358,63 @@ main p {
   font-weight: var(--fw-light);
   font-family: var(--ff-primary-100);
   text-align: left;
-  padding: 0 16px 72px 16px;
+  padding: 0 16px 128px 16px;
+}
+
+@media (min-width: 1640px) {
+  .softi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .softi_content {
+    background-color: var(--clr-primary-300);
+    padding-top: 0;
+    border-radius: 0 100px 0 0;
+    height: 450px;
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .softi h3 {
+    font-size: var(--fs-800);
+    color: var(--clr-neutral-100);
+    line-height: 1.2;
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-primary-100);
+    text-align: left;
+    padding: 0 16px 0 16px;
+  }
+
+  .softi p {
+    font-size: var(--fs-500);
+    color: var(--clr-neutral-100);
+    margin-top: 24px;
+    font-weight: var(--fw-light);
+    font-family: var(--ff-primary-100);
+    text-align: left;
+    padding: 0 16px 0 16px;
+  }
+
+  .softi_img-wrapper {
+    margin-bottom: 0;
+    z-index: 100;
+    background-color: var(--clr-primary-300);
+    border-radius: 0 0 0 100px;
+    height: 450px;
+    position: relative;
+  }
+
+  .softi img {
+    position: absolute;
+    margin-bottom: 0;
+    z-index: 100;
+    bottom: -87px;
+  }
 }
 
 /* fos */
@@ -365,7 +437,7 @@ main p {
   }
 
   .fos {
-    margin: 120px auto 0 auto;
+    margin: 60px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,4 +542,8 @@ footer li:not(.footer_links-title):hover {
   .footer_links-title {
     margin-top: 0;
   }
+}
+
+p {
+  max-width: 640px;
 }
